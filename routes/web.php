@@ -50,7 +50,8 @@ Route::prefix('profil')->group(function () {
 });
 
 Route::prefix('donasi')->group(function () {
-    Route::get('/', [donasiController::class, 'donasi'])->name('donasiPage');
+    // Route::get('/', [donasiController::class, 'donasi'])->name('donasiPage');
+    Route::get('/', [donasiController::class, 'maintenanceDonasi'])->name('donasiPage');
 
     Route::post('payments/midtrans-notification', [PaymentCallbackController::class, 'receive']);
 });

@@ -17,12 +17,12 @@ class UserSeeder extends Seeder
     {
         DB::table('users')->insert([
             'name' => "admin",
-            'email' => 'admin@yasanwaqafbarbate.org',
-            'password' => Hash::make('adminwebsiteyayasanwaqafbarbate'),
+            'email' => 'admin@yayasanwaqafbarbate.org',
+            'password' => Hash::make('adminwebsiteywbic'),
         ]);
         DB::table('users')->insert([
             'name' => "admin",
-            'email' => 'mac@yasanwaqafbarbate.org',
+            'email' => 'mac@yayasanwaqafbarbate.org',
             'password' => Hash::make('ruhulislam21'),
         ]);
     }

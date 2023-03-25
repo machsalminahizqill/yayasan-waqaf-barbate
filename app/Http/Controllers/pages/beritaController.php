@@ -19,8 +19,11 @@ class beritaController extends Controller
     public function detailPage($slug, $id)
     {
         $berita = berita::where('id', $id)->where('slug', $slug)->first();
-        $beritas = berita::where('id', '!=', $id)->get()->random(4);
+        $beritas = berita::where('id', '!=', $id)->get();
 
+        if (count($beritas) > 4) {
+            $beritas = berita::where('id', '!=', $id)->get()->random(4);
+        }
 
         return view('guest.pages.berita.detail')
         ->with('berita', $berita)

@@ -13,6 +13,11 @@ class donasiController extends Controller
         return view('guest.pages.donasi.main');
     }
 
+    public function maintenanceDonasi()
+    {
+        return view('guest.pages.donasi.maintenance');
+    }
+
     public function getSnapToken(Request $request)
     {
         // Set your Merchant Server Key
